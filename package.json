@@ -1,0 +1,27 @@
+{
+  "name": "browser-ethereum-shim",
+  "version": "0.0.1",
+  "description": "Browser Ethereum Shim for WebView",
+  "main": "dist/browser_ethereum_shim.js",
+  "rollupOutput": "dist/browser_ethereum_shim_raw.js",
+  "repository": "git@github.com:jim-lake/browser-ethereum-shim.git",
+  "author": "jlake <jim@blueskylabs.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
+    "pretty": "prettier \"src/**/*.ts\" --write",
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.5.0",
+    "@typescript-eslint/parser": "^5.5.0",
+    "eslint": "^8.3.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.60.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  }
+}
