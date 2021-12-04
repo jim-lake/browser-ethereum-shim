@@ -7,7 +7,7 @@ declare global {
   }
 }
 window.ethereum = {
-  isMetaMask: true,
+  isMetaMask: false,
   isConnected,
   on,
   once,
