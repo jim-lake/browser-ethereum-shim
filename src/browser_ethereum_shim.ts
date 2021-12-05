@@ -15,6 +15,9 @@ window.ethereum = {
   addListener: on,
   removeListener: off,
   removeAllListeners,
+  send,
+  sendAsync,
+  enable,
   request,
   _resolveRequest,
   _rejectRequest,
@@ -52,6 +55,20 @@ function emit(event: string, message: any) {
   handler.once_list = [];
   on_list.forEach((callback) => callback(message));
   once_list.forEach((callback) => callback(message));
+}
+
+// stupid old dapps require these because no one ever updates code
+function send(method: string, params?: any[]) {
+  return request({ method, params });
+}
+function sendAsync(payload: any, done: (err?: any, result?: any) => unknown) {
+  request(payload).then(
+    (result) => done(null, result),
+    (err) => done(err)
+  );
+}
+function enable() {
+  return request({ method: 'eth_requestAccounts' });
 }
 
 type Executor = {
