@@ -1,6 +1,6 @@
 {
   "name": "browser-ethereum-shim",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Browser Ethereum Shim for WebView",
   "main": "dist/browser_ethereum_shim.js",
   "rollupOutput": "dist/browser_ethereum_shim_raw.js",

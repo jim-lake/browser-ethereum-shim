@@ -8,6 +8,7 @@ declare global {
 }
 window.ethereum = {
   isMetaMask: false,
+  autoRefreshOnNetworkChange: false,
   isConnected,
   on,
   once,
